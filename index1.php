@@ -6,7 +6,9 @@
      * Time: 15:37
      */
     set_time_limit(0);
+    ob_end_flush();
     for ($i = 0 ; $i < 10 ; $i++) {
         echo $i;
-        sleep(2);
+        flush();
+        sleep(1);
     }
