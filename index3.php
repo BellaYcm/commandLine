@@ -10,7 +10,7 @@
     pcntl_signal(SIGINT, function () {
         exit("有未处理的信号被触发");
     });#ctrl+c 关闭后会触发
-    pcntl_alarm(1);
+    #pcntl_alarm(1);  #为进程设置一个alarm闹钟信号
     for ($i = 1 ; $i < 1000000 ; $i++) {
         echo $i;
         sleep(1);
